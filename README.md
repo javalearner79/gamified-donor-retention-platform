@@ -1,56 +1,68 @@
 # Gamified Donor Retention & Smart Cooldown Re-engagement
 
-A full-stack MERN web application designed to improve blood donor retention through
-gamification, donation tracking, donor insights, and smart cooldown-based
-re-engagement.
+A full-stack MERN web application designed to improve blood donor retention through donor engagement, eligibility tracking, donation history, gamification, and smart cooldown-based re-engagement.
 
-## Overview
+## 🚀 Live Demo
 
-Donor retention is a major challenge for blood donation organizations. Donors
-may become inactive after donating because they are not eligible to donate again
-immediately or simply lose engagement over time.
+**Frontend:**  
+https://gamified-donor-retention-platform.vercel.app/
 
-This platform helps NGOs and donor communities:
+**Backend API:**  
+https://gamified-donor-retention-platform-a.vercel.app/
 
-- Register and manage donors
-- Track donation history
-- Monitor donor eligibility and cooldown periods
-- Provide donor engagement insights
-- Encourage repeat donations through gamification
-- Identify donors who are ready for re-engagement
+**API Health Check:**  
+https://gamified-donor-retention-platform-a.vercel.app/api/health
 
-## Key Features
+---
 
-### Donor Management
+## 📌 Project Overview
+
+Donor retention is a major challenge for blood donation organizations. Donors may become inactive after donating because they are unsure when they are eligible to donate again or simply lose engagement over time.
+
+This project provides a centralized platform where:
+
+- Donors can register and track their donation activity.
+- Donation eligibility is calculated automatically.
+- Donors can view their donation history.
+- Gamification encourages continued participation.
+- NGOs can monitor donor activity and engagement.
+- Cooldown periods are used to determine when donors can be re-engaged.
+
+---
+
+## ✨ Key Features
+
+### Donor Features
 - Donor registration
-- Donor profile management
-- Blood group and contact information
+- Blood group and contact information management
 - Donation history
+- Donation eligibility tracking
+- Next eligible donation date
+- Remaining cooldown period
+- Donor engagement metrics
+- Achievement/gamification support
 
-### Smart Cooldown
-- Tracks the time since the previous donation
-- Identifies donor eligibility
-- Prevents premature re-engagement
-- Supports timely donor outreach
-
-### Gamification
-- Donation milestones
-- Donor achievements
-- Engagement-oriented progress tracking
-
-### Dashboards
-- Donor dashboard
-- Donation history
+### NGO Features
 - NGO dashboard
-- Donor and donation statistics
+- Donor overview
+- Donation activity insights
+- Donor retention information
+- Engagement monitoring
 
-### Backend API
-- REST APIs for donors and donations
-- Health-check endpoint
-- MongoDB data persistence
-- Request validation and error handling
+### Backend Features
+- RESTful API
+- MongoDB database integration
+- Donor management
+- Donation management
+- Dashboard APIs
+- Health-check API
+- Request validation
+- Error handling
+- Eligibility and cooldown calculations
 
-## Tech Stack
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 - React
@@ -65,30 +77,23 @@ This platform helps NGOs and donor communities:
 - MongoDB
 - Mongoose
 
-## Project Structure
+### Deployment
+- Vercel
+- MongoDB Atlas
+
+---
+
+## 🔄 Application Flow
 
 ```text
-gamified-donor-retention-platform/
-│
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   ├── server.js
-│   └── package.json
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── utils/
-│   ├── index.html
-│   └── package.json
-│
-├── .gitignore
-├── package.json
-└── README.md
+User
+  ↓
+React Frontend
+  ↓
+Axios API Requests
+  ↓
+Express REST API
+  ↓
+Mongoose
+  ↓
+MongoDB Atlas
