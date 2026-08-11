@@ -30,4 +30,10 @@ app.use(errorHandler);
 
 await connectDatabase();
 
-app.listen(port, () => console.log(`API server listening on port ${port}`));
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`API server listening on port ${port}`);
+  });
+}
+
+export default app;
